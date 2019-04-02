@@ -1,6 +1,7 @@
 <?php
 $h1 = 'Добро пожаловать на сайт Opel!';
 $title = 'Opel';
+$current_year = date('Y');
 ?>
 
 <!DOCTYPE html>
@@ -10,8 +11,8 @@ $title = 'Opel';
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
         <?php
-    echo $title;
-    ?>
+        echo $title;
+        ?>
     </title>
     <!-- <title>Lesson 1</title> -->
     <link rel="stylesheet" href="css/style.css">
@@ -25,16 +26,16 @@ $title = 'Opel';
         <div class="item text-logo">
             <h1>
                 <?php
-            echo $h1;
-            ?>
+                echo $h1;
+                ?>
             </h1>
-                <!-- <h1>Добро пожаловать на сайт Opel!</h1> -->
-                <p>Сегодня: 
-                    <?php
-                   echo $date = date('D, d M Y H:i:s', time());
-                    ?>
-                    </p>
-            </div>
+            <!-- <h1>Добро пожаловать на сайт Opel!</h1> -->
+            <p>Сегодня:
+                <?php
+                echo $date = date('D, d M Y H:i:s', time());
+                ?>
+            </p>
+        </div>
         <div class="item item-1">
             <a href="astra_gtc.html"><img src="img/Opel_AstraGTC.jpg" alt="Opel Astra GTC"></a>
             <div class="item-text">
@@ -83,10 +84,13 @@ $title = 'Opel';
 <footer>
     <div class="footer-content">
         <div class="footer-text">
-            <p class="text-license">All rights reserved 2019 year</p>
+            <p class="text-license">
+                <?php
+                echo 'All rights reserved ' . $current_year . ' year'; ?>
+            </p>
             <h5 class="made">Made by BelkaHL</h5>
         </div>
     </div>
 </footer>
 
-</html>
+</html> 
